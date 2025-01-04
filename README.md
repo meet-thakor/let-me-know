@@ -1,2 +1,2 @@
-# let-me-know
-A project to build a website to get people to share there trauma and suffering anonymously.
+# Let Me Know
+A project to build a website to get people to share their trauma and suffering anonymously.
