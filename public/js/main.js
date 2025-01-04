@@ -32,6 +32,16 @@ document.getElementById('story-form').addEventListener('submit', function(event)
     .catch(error => console.error('Error:', error));
 });
 
+// main.js
+document.getElementById('share-button').addEventListener('click', function() {
+  // Hide the intro section
+  document.querySelector('.intro').style.display = 'none';
+
+  // Show the story sharing form
+  document.getElementById('story-section').style.display = 'block';
+});
+
+
 // Load stories when the page loads
 window.onload = function() {
   fetch('src/php/fetch_stories.php')
