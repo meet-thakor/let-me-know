@@ -1,42 +1,50 @@
-
 /* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f5f5f5; /* Soft light background */
+  color: #333;  /* Dark gray text for contrast */
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #2d2d2d;
+  background-color: #4a90e2; /* Soft blue header */
   color: #fff;
-  padding: 10px 20px;
+  padding: 20px 0;
+  text-align: center;
 }
 
 header .logo {
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  padding: 0;
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #d1f1ff; /* Light blue on hover */
 }
 
 main {
-  padding: 20px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -44,6 +52,20 @@ main {
 .intro {
   text-align: center;
   padding: 50px 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.2em;
+  color: #555;
 }
 
 .stories {
@@ -56,40 +78,106 @@ main {
   background-color: #fff;
   border-radius: 8px;
   padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Hover effect */
+}
+
+.story-text {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .story-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #2d2d2d;
-  text-decoration: none;
   font-weight: bold;
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.story-card a:hover {
+  color: #2a6496; /* Darker blue on hover */
 }
 
 footer {
-  background-color: #2d2d2d;
-  color: #fff;
+  background-color: #4a90e2;
+  color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px;
+}
+
+footer a {
+  color: #d1f1ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   header .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  .intro h1 {
+    font-size: 2em;
   }
 
-  .intro {
-    padding: 30px 0;
+  .stories {
+    grid-template-columns: 1fr;
   }
 
   .story-card {
     padding: 10px;
   }
+
+  footer {
+    padding: 10px;
+  }
+}
+
+/* Form Styles */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+textarea {
+  height: 200px;
+}
+
+button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2a6496;
 }
