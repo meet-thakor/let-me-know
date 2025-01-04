@@ -32,3 +32,31 @@ document.getElementById('story-form').addEventListener('submit', function(event)
     .catch(error => console.error('Error:', error));
 });
 
+// Load stories when the page loads
+window.onload = function() {
+  fetch('src/php/fetch_stories.php')
+    .then(response => response.json())
+    .then(stories => {
+      const storiesContainer = document.getElementById('stories-container');
+
+      stories.forEach(story => {
+        const storyCard = document.createElement('div');
+        storyCard.classList.add('story-card');
+
+        const storyText = document.createElement('p');
+        storyText.classList.add('story-text');
+        storyText.textContent = `"${story.story}"`;
+
+        const storyLink = document.createElement('a');
+        storyLink.href = '#';
+        storyLink.textContent = 'Read more';
+
+        storyCard.appendChild(storyText);
+        storyCard.appendChild(storyLink);
+        storiesContainer.appendChild(storyCard);
+      });
+    })
+    .catch(error => console.error('Error fetching stories:', error));
+};
+
+
