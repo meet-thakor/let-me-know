@@ -4,43 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Let Me Know</title>
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Bulma CSS via CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="css/style.css"> <!-- Your custom styles if needed -->
 </head>
 <body>
-  <!-- Main container with console-like border -->
-  <div class="console-container">
-    <header>
-      <div class="logo">Let Me Know</div>
+  <!-- Main container with Bulma's box class for a console-like border -->
+  <div class="box container">
+    <header class="has-text-centered">
+      <div class="title is-1">Let Me Know</div>
     </header>
 
     <!-- Main content section -->
     <main>
-      <section class="intro">
-        <h1>Let Me Know !!!</h1>
-        <p>A safe space to share and read anonymous trauma stories.</p>
-        <button id="share-button">Write Up Something</button>
+      <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-half">
+              <div class="content has-text-centered">
+                <h1 class="title is-3">Welcome to Let Me Know</h1>
+                <p class="subtitle is-5">A safe space to share and read anonymous trauma stories.</p>
+                <button id="share-button" class="button is-primary is-large">Write Your Story</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- Form section for sharing a story -->
-      <section id="story-section" class="form-section">
-        <h2>Share Your Story</h2>
-        <form id="story-form">
-          <label for="alias">Alias (optional):</label>
-          <input type="text" id="alias" name="alias" placeholder="Enter a name (or leave blank)" />
+      <!-- Story submission form (hidden by default) -->
+      <section id="story-section" class="section is-hidden">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-half">
+              <h2 class="title is-3">Share Your Story</h2>
+              <form id="story-form" class="box">
+                <div class="field">
+                  <label for="alias" class="label">Alias (optional):</label>
+                  <div class="control">
+                    <input class="input" type="text" id="alias" name="alias" placeholder="Enter an alias (or leave blank)">
+                  </div>
+                </div>
 
-          <label for="story">Your Story:</label>
-          <textarea id="story" name="story" rows="10" placeholder="Write your story here..."></textarea>
+                <div class="field">
+                  <label for="story" class="label">Your Story:</label>
+                  <div class="control">
+                    <textarea class="textarea" id="story" name="story" rows="10" placeholder="Write your story here..."></textarea>
+                  </div>
+                </div>
 
-          <button type="submit">Submit</button>
-        </form>
+                <div class="field">
+                  <div class="control">
+                    <button class="button is-link is-fullwidth" type="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>Support & Resources: <a href="https://www.mentalhealth.org">Mental Health Resources</a></p>
+    <footer class="footer has-background-primary has-text-white">
+      <div class="content has-text-centered">
+        <p>Support & Resources: <a href="https://www.mentalhealth.org" class="has-text-white">Mental Health Resources</a></p>
+      </div>
     </footer>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
