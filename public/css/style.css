@@ -2,154 +2,92 @@
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f5f5f5; /* Soft light background */
-  color: #333;  /* Dark gray text for contrast */
+  color: #333;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
 
+/* Console border around the whole page */
+.console-container {
+  border: 10px solid #333; /* Dark border to create a console effect */
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1200px;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styles */
 header {
   background-color: #4a90e2; /* Soft blue header */
   color: #fff;
   padding: 20px 0;
-  text-align: center;
 }
 
 header .logo {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-  color: #d1f1ff; /* Light blue on hover */
-}
-
-main {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+/* Main content section (Intro) */
 .intro {
   text-align: center;
-  padding: 50px 0;
+  padding: 40px 20px;
   background-color: #ffffff;
   border-radius: 10px;
+  margin-bottom: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .intro h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   color: #333;
   margin-bottom: 20px;
 }
 
 .intro p {
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #555;
 }
 
-.stories {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.story-card {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.story-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Hover effect */
-}
-
-.story-text {
-  font-size: 1.1em;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.story-card a {
-  font-weight: bold;
-  color: #4a90e2;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.story-card a:hover {
-  color: #2a6496; /* Darker blue on hover */
-}
-
-footer {
+button {
   background-color: #4a90e2;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-footer a {
-  color: #d1f1ff;
-  text-decoration: none;
-}
-
-footer a:hover {
   color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  header .logo {
-    font-size: 1.8em;
-  }
-
-  .intro h1 {
-    font-size: 2em;
-  }
-
-  .stories {
-    grid-template-columns: 1fr;
-  }
-
-  .story-card {
-    padding: 10px;
-  }
-
-  footer {
-    padding: 10px;
-  }
+button:hover {
+  background-color: #2a6496; /* Darker blue on hover */
 }
 
-/* Form Styles */
-form {
-  background-color: #fff;
+/* Story sharing form section */
+.form-section {
+  background-color: #ffffff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
   margin: 0 auto;
+}
+
+.form-section h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 input[type="text"],
@@ -167,7 +105,7 @@ textarea {
   height: 200px;
 }
 
-button {
+button[type="submit"] {
   background-color: #4a90e2;
   color: #fff;
   border: none;
@@ -178,6 +116,43 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+button[type="submit"]:hover {
   background-color: #2a6496;
+}
+
+/* Footer styles */
+footer {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+footer a {
+  color: #d1f1ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2.2em;
+  }
+
+  .form-section h2 {
+    font-size: 1.8em;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 10px;
+  }
 }
