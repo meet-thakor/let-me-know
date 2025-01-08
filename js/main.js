@@ -434,12 +434,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const $masterclassClose = document.getElementById("masterclass-close");
   const masterclassStorage = window.localStorage.getItem(MASTERCLASS_KEY);
 
-  if (masterclassStorage !== "seen") {
-    window.setTimeout(() => {
-      openMasterclass();
-    }, 3000);
-  }
-
   const openMasterclass = () => {
     $masterclass.classList.add("is-open");
   };
@@ -449,13 +443,22 @@ document.addEventListener("DOMContentLoaded", () => {
     $masterclass.classList.remove("is-open");
   };
 
-  $masterclassBackground.addEventListener("click", (event) => {
+  /*$masterclassBackground.addEventListener("click", (event) => {
     event.preventDefault();
     closeMasterclass();
-  });
+  });*/
 
   $masterclassClose.addEventListener("click", (event) => {
     event.preventDefault();
     closeMasterclass();
   });
+
+  const $writeupButton = document.getElementById("writeup");
+
+  if ($writeupButton) {
+    $writeupButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      openMasterclass();
+    });
+  }
 });
