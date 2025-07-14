@@ -20,6 +20,7 @@
 
   <link rel="stylesheet" href="css/docsearch.min.css">
   <link rel="stylesheet" href="css/website.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <link rel="canonical" href="">
 
@@ -38,7 +39,6 @@
   <link rel="shortcut icon" href="favicon.ico">
   <meta name="msapplication-config" content="https://bulma.io/favicons/browserconfig.xml?v=201701041855">
   <meta name="theme-color" content="#00d1b2">
-
 </head>
 
 <body>
@@ -236,7 +236,7 @@
 
         <div class="bd-heading-title">
           <h2 class="title">
-            <strong>Backed</strong> by the <strong>community</strong>
+            <strong></strong>
           </h2>
 
           <div class="subtitle">
@@ -248,39 +248,7 @@
 
 
       <div class="bd-tws">
-        <div class="bd-tws-list">
-
-
-
-          <article data-likes="86" data-id="910956939886043136" class="bd-tw  ">
-            <header class="bd-tw-header">
-              <figure class="bd-tw-avatar">
-                <img src="">
-              </figure>
-              <div class="bd-tw-name">
-                <strong class="bd-tw-fullname">
-                  @Chris Sev
-                </strong>
-              </div>
-              </a>
-            </header>
-
-            <div class="bd-tw-content">
-              Want a change of pace from Bootstrap? Try Bulma. It's my BFF right now
-            </div>
-
-            <ul class="bd-tw-actions">
-              <li class="bd-tw-action is-heart">
-                <a class="bd-tw-action-link" href="" target="_blank">
-                  <div class="bd-tw-icon"></div>
-                  <span class="bd-tw-action-stat">
-                    86
-                  </span>
-
-                </a>
-              </li>
-            </ul>
-          </article>
+        <div class="bd-tws-list" id="threadList">
         </div>
       </div>
     </section>
@@ -294,49 +262,7 @@
 
 
     <script src="js/native.js"></script>
-    <script>
-      _native.init('CVAIKK3E', {
-        targetClass: 'native-js',
-        fallback: `<a href="https://gum.co/css-44-deluxe" class="native-flex" target="_blank">
-      <style>
-        .native-js {
-          background: linear-gradient(-30deg, #4f38a4, #a244bc 45%, #4f38a4 45%) #4f38a4;
-        }
-
-        .native-details {
-          color: #FFFFFF !important;
-        }
-
-        .native-details:hover {
-          color: #FFFFFF !important;
-        }
-
-        .native-cta {
-          color: #FFFFFF;
-          background-color: #3bb76d;
-        }
-
-        .native-cta:hover {
-          color: #native_cta_color_hover;
-          background-color: #3bb76d;
-        }
-      </style>
-      <div class="native-main">
-        <img class="native-img" src="https://bulma.io/assets/images/fortyfour-native.png">
-        <div class="native-details">
-          <span class="native-company">CSS in 44 minutes</span>
-          <span class="native-desc">Learn how to build your own webpage from scratch!</span>
-        </div>
-      </div>
-      <span class="native-cta">Buy the book</span>
-    </a>`,
-      });
-    </script>
-
-
-
-
-
+    <script src="js/fetch.js"></script>
     <footer class="bd-footer footer has-text-centered">
       <div class="container">
         <h4 class="bd-footer-title">
@@ -358,10 +284,7 @@
               </span>
             </div>
           </div>
-            <textarea
-            class="textarea has-fixed-size is-info"
-            placeholder="Write your story here !!"
-          ></textarea>
+          <textarea class="textarea has-fixed-size is-info" placeholder="Write your story here !!"></textarea>
           <div class="shine">
             <span>Submit</span>
           </div>
@@ -376,10 +299,7 @@
               </span>
             </div>
           </div>
-            <textarea
-            class="textarea has-fixed-size is-info is-large"
-            placeholder="Write your story here !!"
-          ></textarea>
+          <textarea class="textarea has-fixed-size is-info is-large" placeholder="Write your story here !!"></textarea>
           <div class="shine">
             <span>Submit</span>
           </div>
@@ -395,6 +315,9 @@
 
     <link rel="stylesheet" href="css/index.css">
     <script defer="" src="js/index.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1487.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aws-sdk/client-s3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aws-sdk/credential-provider-cognito-identity"></script>
 
 
 

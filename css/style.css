@@ -1,3 +1,33 @@
-.planet-img{
-    
-}
+  .full-text-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    display: block;
+  }
+
+  .full-text-wrapper.expanded {
+    max-height: 500px; /* large enough to show full content */
+    opacity: 1;
+  }
+
+  .read-more-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .read-more-btn:hover {
+    background-color: #357ab7;
+  }
+
+  .read-more-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.4);
+  }
