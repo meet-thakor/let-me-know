@@ -1,3 +1,4 @@
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1483.0.min.js"></script>
   // AWS Cognito configuration
   AWS.config.region = 'us-east-1';
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({

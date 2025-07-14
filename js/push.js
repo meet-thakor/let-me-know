@@ -1,4 +1,5 @@
-   // AWS Configuration
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.1483.0.min.js"></script>
+// AWS Configuration
     AWS.config.region = 'us-east-1'; 
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
       IdentityPoolId: 'us-east-1:51a0383b-a60c-4522-bd80-33c53115edeb'
