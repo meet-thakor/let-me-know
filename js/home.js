@@ -114,7 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   $dots.forEach(($dot) => {
     const id = $dot.dataset.id;
-
+  if (!DOTS[id]) {
+    console.warn(`Missing DOTS config for id: ${id}`);
+    return;
+  }
+  
     if (reducedMotion) {
       animate($dot, id);
     } else {
@@ -175,13 +179,18 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
+if ($add) {
   $add.addEventListener("click", () => {
     showing++;
     showColumns();
   });
+}
 
+if ($remove) {
   $remove.addEventListener("click", () => {
     showing--;
     showColumns();
   });
+}
+
 });

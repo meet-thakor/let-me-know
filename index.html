@@ -184,8 +184,8 @@
           <strong>No personal information required!</strong>
         </span>
 
-        <div class="bd-home-buttons buttons is-centered" id="writeup">
-          <button class="shine">
+        <div class="bd-home-buttons buttons is-centered">
+          <button id="writeup" class="shine">
             Write something up<span class="icon"> <i class="fas fa-solid fa-feather"></i></span>
           </button>
         </div>
@@ -254,15 +254,6 @@
     </section>
     <script data-cfasync="false" src="js/email-decode.min.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
-
-
-
-
-
-
-
-    <script src="js/native.js"></script>
-    <script src="js/fetch.js"></script>
     <footer class="bd-footer footer has-text-centered">
       <div class="container">
         <h4 class="bd-footer-title">
@@ -278,14 +269,14 @@
         <div class="masterclass-content is-hidden-desktop">
           <div class="field">
             <div class="control has-icons-left">
-              <input class="input is-success" type="text" placeholder="Name" value="">
+              <input class="input is-success rname" type="text" value="">
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
             </div>
           </div>
           <textarea class="textarea has-fixed-size is-info" placeholder="Write your story here !!"></textarea>
-          <div class="shine">
+          <div class="shine submit-button">
             <span>Submit</span>
           </div>
         </div>
@@ -293,14 +284,14 @@
         <div class="masterclass-content is-hidden-touch">
           <div class="field">
             <div class="control has-icons-left">
-              <input class="input is-success is-medium" type="text" placeholder="Name [Optional]" value="">
+              <input class="input is-success is-medium rname" type="text" value="">
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
             </div>
           </div>
           <textarea class="textarea has-fixed-size is-info is-large" placeholder="Write your story here !!"></textarea>
-          <div class="shine">
+          <div class="shine submit-button">
             <span>Submit</span>
           </div>
         </div>
@@ -312,12 +303,11 @@
 
     <script src="js/clipboard-2.0.11.min.js"></script>
     <script src="js/main.js"></script>
-
+   <script type="module" src="js/fetch.js"></script>
+    <script type="module" src="js/push.js"></script>
     <link rel="stylesheet" href="css/index.css">
-    <script defer="" src="js/index.js"></script>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1487.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@aws-sdk/client-s3"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@aws-sdk/credential-provider-cognito-identity"></script>
+    <script defer="" src="js/react-index.js"></script>
+ 
 
 
 

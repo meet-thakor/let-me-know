@@ -1,17 +1,21 @@
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.1483.0.min.js"></script>
-// AWS Configuration
-    AWS.config.region = 'us-east-1'; 
-    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: 'us-east-1:51a0383b-a60c-4522-bd80-33c53115edeb'
-    });
+import { initAWS } from './aws.js';
 
-    const s3 = new AWS.S3({
-      apiVersion: '2006-03-01',
-      params: { Bucket: 'let-me-know-datapool' }
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".submit-button");
 
-    document.querySelector('.shine span').addEventListener('click', async () => {
-      const container = document.querySelector('.masterclass-content');
+  if (!buttons.length) {
+    console.warn("No submit buttons found.");
+    return;
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const container = button.closest('.masterclass-content');
+      if (!container) {
+        alert("Form container not found.");
+        return;
+      }
+
       const name = container.querySelector('input')?.value.trim() || "Anonymous";
       const story = container.querySelector('textarea')?.value.trim();
 
@@ -29,16 +33,16 @@
       };
 
       try {
-        // Step 1: Load existing data
+        const s3 = await initAWS();
+
         const existing = await s3.getObject({
           Bucket: 'let-me-know-datapool',
           Key: 'data.json'
         }).promise();
 
         const json = JSON.parse(existing.Body.toString('utf-8'));
-        json.unshift(newEntry); // Add to top
+        json.unshift(newEntry);
 
-        // Step 2: Save back to S3
         await s3.putObject({
           Bucket: 'let-me-know-datapool',
           Key: 'data.json',
@@ -55,3 +59,5 @@
         alert("Something went wrong. See console for details.");
       }
     });
+  });
+});

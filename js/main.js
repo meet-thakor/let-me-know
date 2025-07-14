@@ -432,7 +432,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "masterclass-background",
   );
   const $masterclassClose = document.getElementById("masterclass-close");
-  const masterclassStorage = window.localStorage.getItem(MASTERCLASS_KEY);
 
   const openMasterclass = () => {
     $masterclass.classList.add("is-open");
@@ -461,4 +460,17 @@ document.addEventListener("DOMContentLoaded", () => {
       openMasterclass();
     });
   }
+
+  function generateRandomName() {
+    const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
+    const planet = planets[Math.floor(Math.random() * planets.length)];
+    const number = Math.floor(1000 + Math.random() * 9000);
+    return `${planet}${number}`;
+  }
+
+    document.querySelectorAll('.rname').forEach(input => {
+      if (!input.value.trim()) {
+        input.value = generateRandomName();
+      }
+    });
 });
