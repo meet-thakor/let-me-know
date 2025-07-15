@@ -1,115 +1,96 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Error - Page Not Found</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
-  <script src="https://kit.fontawesome.com/a2e0f1f5e0.js" crossorigin="anonymous"></script>
-  <style>
-    :root {
-      --bg-color: #f5f5f5;
-      --text-color: #363636;
-    }
-    [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: #f5f5f5;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error - Page Not Found</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <script src="https://kit.fontawesome.com/a2e0f1f5e0.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg-color: #2d2929;
+            --text-color: #c6c6c6;
+        }
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background 0.3s ease;
-    }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background 0.3s ease;
+        }
 
-    .error-container {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
 
-    .error-code {
-      font-size: 8rem;
-      font-weight: 700;
-      color: #ff3860;
-    }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #ff3860;
+            margin-top: 2rem;
+        }
 
-    .error-icon {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      color: #ff3860;
-    }
+        .error-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #ff3860;
+        }
 
-    .btn-home {
-      margin-top: 2rem;
-    }
+        .btn-home {
+            margin-top: 2rem;
+        }
 
-    .logo {
-      max-width: 150px;
-      margin-bottom: 2rem;
-    }
+        .title{
+            color: #c6c6c6;
+            margin-top: 2rem;
+        }
 
-    .theme-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
-  </style>
+        .subtitle{
+            color: #c6c6c6;
+            margin-top: 2rem;
+        }
+    </style>
+      <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/all.min.css">
 </head>
+
 <body>
 
-  <!-- Optional Logo -->
-  <div class="theme-toggle">
-    <button class="button is-small is-light" onclick="toggleTheme()">Toggle Theme</button>
-  </div>
+    <section class="error-container">
+        <span class="icon error-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+        </span>
+        <div class="error-code" id="errorCode">404</div>
+        <h1 class="title is-3" id="errorTitle">Oops! Page not found.</h1>
+        <p class="subtitle is-5" id="errorMessage">The page you're looking for doesn't exist or was moved.</p>
 
-  <section class="error-container">
-    <img src="https://via.placeholder.com/150x50?text=Your+Logo" alt="Logo" class="logo" />
-    
-    <span class="icon error-icon">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
-    <div class="error-code" id="errorCode">404</div>
-    <h1 class="title is-3" id="errorTitle">Oops! Page not found.</h1>
-    <p class="subtitle is-5" id="errorMessage">The page you're looking for doesn't exist or was moved.</p>
-    
-    <a href="/" class="button is-danger is-light btn-home">
-      <span class="icon"><i class="fas fa-home"></i></span>
-      <span>Go to Homepage</span>
-    </a>
-    <p class="mt-4"><em>Redirecting you in <span id="countdown">10</span> seconds...</em></p>
-  </section>
+        <a href="index.html" class="button is-danger is-light btn-home">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span>Go to Homepage</span>
+        </a>
+        <p class="mt-4"><em>Redirecting you in <span id="countdown">10</span> seconds...</em></p>
+    </section>
 
-  <script>
-    // Dark mode toggle
-    function toggleTheme() {
-      const html = document.documentElement;
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    }
+    <script>
+        let seconds = 10;
+        const countdown = document.getElementById('countdown');
+        const redirectURL = 'index.html';
 
-    // Optional redirection after 10 seconds
-    let seconds = 10;
-    const countdown = document.getElementById('countdown');
-    const redirectURL = '/';
-
-    const interval = setInterval(() => {
-      seconds--;
-      countdown.textContent = seconds;
-      if (seconds <= 0) {
-        clearInterval(interval);
-        window.location.href = redirectURL;
-      }
-    }, 1000);
-
-    // Optional: change to 500 error dynamically
-    // document.getElementById("errorCode").textContent = "500";
-    // document.getElementById("errorTitle").textContent = "Server Error";
-    // document.getElementById("errorMessage").textContent = "Something went wrong on our end. Please try again later.";
-  </script>
+        const interval = setInterval(() => {
+            seconds--;
+            countdown.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = redirectURL;
+            }
+        }, 1000);
+    </script>
 </body>
+
 </html>
