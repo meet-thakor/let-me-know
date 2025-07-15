@@ -6,25 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A safe space to share and read anonymous trauma stories.">
+  <title>Let Me Know: A safe space to share and read anonymous trauma stories.</title>
+  <link rel="canonical" href="https://letmeknow.*">
 
-  <title>
-    Let Me Know: A safe space to share and read anonymous trauma stories.
-
-  </title>
-
-  <link rel="stylesheet" href="css/all.min.css">
-
-
-
-
-
-  <link rel="stylesheet" href="css/docsearch.min.css">
-  <link rel="stylesheet" href="css/website.min.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <link rel="canonical" href="">
-
-  <meta property="og:url" content="">
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://letmeknow.*">
   <meta property="og:type" content="website">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
@@ -34,16 +20,19 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
-  <!-- link rel="manifest" href="https://bulma.io/favicons/manifest.json?v=201701041855" -->
   <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#00d1b2">
   <link rel="shortcut icon" href="favicon.ico">
-  <meta name="msapplication-config" content="https://bulma.io/favicons/browserconfig.xml?v=201701041855">
   <meta name="theme-color" content="#00d1b2">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/docsearch.min.css">
+  <link rel="stylesheet" href="css/website.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-
-
   <section class="bd-home-intro">
     <div class="bd-home-circles">
       <div class="bd-circles">
@@ -55,68 +44,56 @@
         <div class="bd-circle js-animated is-six"></div>
         <div class="bd-circle js-animated is-seven"></div>
         <div class="bd-circle js-animated is-eight"></div>
-
         <div data-id="dark" class="bd-dot js-ready js-dot">
           <div class="bd-dot-bounce is-2">
-            <button class="js-darkmode bd-darkmode thing">
+            <button class="js-darkmode bd-darkmode thing" aria-label="Toggle dark mode">
               <span class="icon is-small bd-hidden-dark">
                 <i class="fas fa-moon color-moon" aria-hidden="true"></i>
               </span>
-
               <span class="bd-hidden-dark">Moon</span>
-
               <span class="icon is-small bd-hidden-light">
                 <i class="fas fa-sun color-sun" aria-hidden="true"></i>
               </span>
-
               <span class="bd-hidden-light">Sun</span>
             </button>
-
           </div>
         </div>
-
+        <!-- Planets -->
         <div data-id="mercury" class="bd-dot js-ready js-dot">
           <div class="bd-dot-bounce is-4">
             <div class="thing is-dartsass">Mercury</div>
           </div>
         </div>
-
         <div data-id="venus" class="bd-dot js-ready js-dot">
           <div class="bd-dot-bounce is-4">
             <div class="thing is-dartsass">Venus</div>
           </div>
         </div>
-
         <div data-id="earth" class="bd-dot js-ready js-dot">
           <div class="bd-dot-bounce is-4">
             <div class="thing is-dartsass">Earth</div>
           </div>
         </div>
-
         <div data-id="mars" class="bd-dot js-ready js-dot">
           <div class="bd-dot-bounce is-4">
             <div class="thing is-dartsass">Mars</div>
           </div>
         </div>
-
         <div data-id="jupiter" class="bd-dot js-ready js-dot">
           <div class="bd-dot-bounce is-4">
             <div class="thing is-dartsass">Jupiter</div>
           </div>
         </div>
-
         <div data-id="saturn" class="bd-dot js-ready js-dot">
           <div class="bd-dot-bounce is-4">
             <div class="thing is-dartsass">Saturn</div>
           </div>
         </div>
-
         <div data-id="uranus" class="bd-dot js-ready js-dot">
           <div class="bd-dot-bounce is-4">
             <div class="thing is-dartsass">Uranus</div>
           </div>
         </div>
-
         <div data-id="neptune" class="bd-dot js-ready js-dot">
           <div class="bd-dot-bounce is-4">
             <div class="thing is-dartsass">Neptune</div>
@@ -124,193 +101,143 @@
         </div>
       </div>
     </div>
-
     <header class="bd-header">
       <div class="bd-nav-themes">
-        <button id="js-cycle" class="bd-cycle js-burger" data-target="js-themes">
+        <button id="js-cycle" class="bd-cycle js-burger" data-target="js-themes" aria-label="Cycle theme">
           <div class="bd-cycles">
-            <div class="bd-cycle-sun">
-              <span class="icon">
-                <i class="fas fa-lg fa-sun" aria-hidden="true"></i>
-              </span>
+            <div class="bd-cycle-sun"><span class="icon"><i class="fas fa-lg fa-sun" aria-hidden="true"></i></span>
             </div>
-
-            <div class="bd-cycle-moon">
-              <span class="icon">
-                <i class="fas fa-lg fa-moon" aria-hidden="true"></i>
-              </span>
+            <div class="bd-cycle-moon"><span class="icon"><i class="fas fa-lg fa-moon" aria-hidden="true"></i></span>
             </div>
           </div>
         </button>
-
         <div id="js-themes" class="bd-nav-menu is-cycles js-menu js-themes">
-          <button data-scheme="light" class="bd-nav-item is-sun" aria-label="Light mode">
-            <span class="icon">
-              <i class="fas fa-sun" aria-hidden="true"></i>
-            </span>
-            <span>Light</span>
-          </button>
-
-          <button data-scheme="dark" class="bd-nav-item is-moon" aria-label="Dark mode">
-            <span class="icon">
-              <i class="fas fa-moon" aria-hidden="true"></i>
-            </span>
-            <span>Dark</span>
-          </button>
-
-          <button data-scheme="system" class="bd-nav-item is-system" aria-label="System mode">
-            <span class="icon">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-            </span>
-            <span>System</span>
-          </button>
+          <button data-scheme="light" class="bd-nav-item is-sun" aria-label="Light mode"><span class="icon"><i
+                class="fas fa-sun" aria-hidden="true"></i></span><span>Light</span></button>
+          <button data-scheme="dark" class="bd-nav-item is-moon" aria-label="Dark mode"><span class="icon"><i
+                class="fas fa-moon" aria-hidden="true"></i></span><span>Dark</span></button>
+          <button data-scheme="system" class="bd-nav-item is-system" aria-label="System mode"><span class="icon"><i
+                class="fas fa-desktop" aria-hidden="true"></i></span><span>System</span></button>
         </div>
       </div>
     </header>
-
-
     <div class="bd-home-intro-body">
       <div class="bd-home-intro-content">
-        <h1 class="bd-home-title js-animated">
-          Let Me Know !!
-        </h1>
-
-        <p class="subtitle is-5">
-          A safe space to share and read anonymous trauma stories.
-        </p>
-
+        <h1 class="bd-home-title js-animated">Let Me Know !!</h1>
+        <p class="subtitle is-5">A safe space to share and read anonymous trauma stories.</p>
         <span class="thing bd-home-knowledge">
-          <span class="icon"> <i class="fas fa-circle-check"></i></span>
+          <span class="icon"><i class="fas fa-circle-check"></i></span>
           <strong>No personal information required!</strong>
         </span>
-
         <div class="bd-home-buttons buttons is-centered">
           <button id="writeup" class="shine">
-            Write something up<span class="icon"> <i class="fas fa-solid fa-feather"></i></span>
+            Write something up<span class="icon"><i class="fas fa-solid fa-feather"></i></span>
           </button>
         </div>
-
       </div>
     </div>
-
     <div class="bd-features">
       <div class="bd-features-grid">
-
         <a class="bd-feature is-modern">
           <div class="bd-feature-body">
-            <span class="icon is-medium">
-              <i class="fas fa-solid fa-bullseye fa-xl"></i>
-            </span>
+            <span class="icon is-medium"><i class="fas fa-solid fa-bullseye fa-xl"></i></span>
             <h2 class="bd-feature-title">What’s the goal?</h2>
             <h3 class="bd-tw-content">Our mission is to create a compassionate and non-judgmental environment where
-              individuals can share their stories, express their emotions, and receive support.
-            </h3>
+              individuals can share their stories, express their emotions, and receive support.</h3>
           </div>
         </a>
-
-
         <a class="bd-feature is-easy">
           <div class="bd-feature-body">
-            <span class="icon is-medium">
-              <i class="fas fa-solid fa-people-group fa-xl"></i>
-            </span>
+            <span class="icon is-medium"><i class="fas fa-solid fa-people-group fa-xl"></i></span>
             <h2 class="bd-feature-title">Target Audience</h2>
             <h3 class="bd-tw-content">We are dedicated to supporting survivors of trauma, people seeking solidarity, and
-              individuals looking for a safe judgement free outlet to express themselves without worry.
-            </h3>
+              individuals looking for a safe judgement free outlet to express themselves without worry.</h3>
           </div>
         </a>
-
-
       </div>
     </div>
     <section class="bd-home-section bd-theme-love">
       <div class="bd-heading">
         <div class="bd-heading-icon">
-
-          <span class="icon is-medium">
-            <i class="fas fa-heart fa-lg"></i>
-          </span>
-
+          <span class="icon is-medium"><i class="fas fa-heart fa-lg"></i></span>
         </div>
-
         <div class="bd-heading-title">
-          <h2 class="title">
-            <strong></strong>
-          </h2>
-
-          <div class="subtitle">
-            See what other people <strong>are sharing</strong>
-          </div>
+          <h2 class="title"><strong></strong></h2>
+          <div class="subtitle">See what other people <strong>are sharing</strong></div>
         </div>
-
       </div>
-
-
       <div class="bd-tws">
-        <div class="bd-tws-list" id="threadList">
-        </div>
+        <div class="bd-tws-list" id="threadList"></div>
       </div>
     </section>
-    <script data-cfasync="false" src="js/email-decode.min.js"></script>
-    <script type="text/javascript" src="js/home.js"></script>
     <footer class="bd-footer footer has-text-centered">
       <div class="container">
         <h4 class="bd-footer-title">
-          <strong>Support & Resources: <a href="https://www.mentalhealth.org/">Mental Health Resources</a>.
+          <strong>Support & Resources: <a href="https://www.mentalhealth.org/">Mental Health Resources</a>.</strong>
+          <strong>This website is inspired by the Design of <a href="https://bulma.io/">Bulma</a>.</strong>
         </h4>
       </div>
     </footer>
-
     <div id="masterclass" class="masterclass">
       <div id="masterclass-background" class="masterclass-background"></div>
-
       <div class="masterclass-body">
         <div class="masterclass-content is-hidden-desktop">
+          <!-- SUCCESS message -->
+          <div class="notification is-success is-light is-hidden" id="successMessage">
+            <button class="delete"></button>
+            <span id="successText"></span>
+          </div>
+
+          <!-- ERROR message -->
+          <div class="notification is-danger is-light is-hidden" id="errorMessage">
+            <button class="delete"></button>
+            <span id="errorText"></span>
+          </div>
           <div class="field">
             <div class="control has-icons-left">
+              <label for="name" class="sr-only">Your Name - It is optional</label>
               <input class="input is-success rname" type="text" value="">
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
+              <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
             </div>
           </div>
+          <label for="story-text" class="sr-only">Your story</label>
           <textarea class="textarea has-fixed-size is-info" placeholder="Write your story here !!"></textarea>
-          <div class="shine submit-button">
-            <span>Submit</span>
-          </div>
+          <div class="shine submit-button"><span>Submit</span></div>
         </div>
-
         <div class="masterclass-content is-hidden-touch">
+          <!-- SUCCESS message -->
+          <div class="notification is-success is-light is-hidden" id="successMessage">
+            <button class="delete"></button>
+            <span id="successText"></span>
+          </div>
+
+          <!-- ERROR message -->
+          <div class="notification is-danger is-light is-hidden" id="errorMessage">
+            <button class="delete"></button>
+            <span id="errorText"></span>
+          </div>
           <div class="field">
             <div class="control has-icons-left">
               <input class="input is-success is-medium rname" type="text" value="">
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
+              <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
             </div>
           </div>
           <textarea class="textarea has-fixed-size is-info is-large" placeholder="Write your story here !!"></textarea>
-          <div class="shine submit-button">
-            <span>Submit</span>
-          </div>
+          <div class="shine submit-button"><span>Submit</span></div>
         </div>
       </div>
-
       <button id="masterclass-close" class="modal-close is-large" aria-label="close"></button>
     </div>
-
-
-    <script src="js/clipboard-2.0.11.min.js"></script>
-    <script src="js/main.js"></script>
-   <script type="module" src="js/fetch.js"></script>
-    <script type="module" src="js/push.js"></script>
-    <link rel="stylesheet" href="css/index.css">
-    <script defer="" src="js/react-index.js"></script>
- 
-
-
-
+  </section>
+  <!-- Scripts: defer/async for performance -->
+  <script defer data-cfasync="false" src="js/email-decode.min.js"></script>
+  <script defer src="js/home.js"></script>
+  <script defer src="js/clipboard-2.0.11.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer type="module" src="js/fetch.js"></script>
+  <script defer type="module" src="js/push.js"></script>
+  <script defer type="module" src="js/like.js"></script>
+  <script defer src="js/react-index.js"></script>
 </body>
 
 </html>

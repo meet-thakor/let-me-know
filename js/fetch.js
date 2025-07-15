@@ -1,5 +1,5 @@
 import { initAWS } from './aws.js';
-async function loadThreadsSecure() {
+export async function loadThreadsSecure() {
     try {
 
         const s3 = await initAWS();
@@ -39,7 +39,7 @@ async function loadThreadsSecure() {
           ${contentHTML}
           <ul class="bd-tw-actions">
             <li class="bd-tw-action is-heart">
-              <a class="bd-tw-action-link" href="${thread.link}" target="_blank">
+              <button class="bd-tw-action-link" data-username="${thread.username}">
                 <div class="bd-tw-icon"></div>
                 <span class="bd-tw-action-stat">${thread.likes}</span>
               </a>
@@ -67,6 +67,3 @@ async function loadThreadsSecure() {
         console.error("Access denied or error fetching data.json:", err);
     }
 }
-
-// Call on page load
-loadThreadsSecure();
